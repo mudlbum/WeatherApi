@@ -13,7 +13,7 @@ body {
 .container {
     background-color: #ffffff; /* White background for the container */
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     text-align: center;
     width: 95%;
@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
-    color: #007bff; /* Blue heading */
+    color: #143353; /* Blue heading */
     margin-bottom: 20px;
 }
 
@@ -35,7 +35,7 @@ h1 {
     padding: 10px;
     margin-right: 10px;
     border: 1px solid #ccc; /* Light grey border */
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 16px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
@@ -43,10 +43,10 @@ h1 {
 #get-weather-btn {
     margin-top: 15px; /* Add margin to separate from input */
     padding: 10px 15px;
-    background-color: #28a745; /* Green button */
+    background-color: #21827d; /* Green button */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
@@ -59,20 +59,17 @@ h1 {
 .weather-results {
     background-color: #e9ecef; /* Light grey background for results */
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     min-height: 100px; /* Ensure some height even when empty */
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1.1em;
     color: #555;
     white-space: pre-wrap; /* Preserve whitespace and wrap text */
+    min-height: 300px; /* Ensure results box has a minimum height */
+    align-items: center;
+    text-align: center;
 }
 
-.weather-results p {
-    margin: 0;
-    min-height: 300px; /* Ensure results box has a minimum height */
-}
 
 @media screen and (max-width: 765px) {
     .container {

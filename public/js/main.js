@@ -10,7 +10,7 @@ async function getData(key, city) {
         // Check if the response was successful
         if (!response.ok) {
             // If response is not OK (e.g., 404, 401), throw an error
-            throw new Error(`HTTP error! Status: ${response.status}`);
+            throw new Error(`Error Status: ${response.status}`);
         }
 
         // Parse the JSON response from the server
