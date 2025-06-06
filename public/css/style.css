@@ -1,90 +1,114 @@
 /* mudlbum/weatherapi/WeatherApi-57ad680432a5e95d81fcd925b70b55000b455477/public/css/style.css */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f2f5; /* Light grey background */
-    color: #333; /* Dark grey text */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5; /* Light grey background */
+  color: #333; /* Dark grey text */
+  background-image: url("/images/background.jpg"); /* Background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+  background-size: cover; /* Cover the entire background */
 }
 
 .container {
-    background-color: #ffffff; /* White background for the container */
-    padding: 30px;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    text-align: center;
-    width: 95%;
-    min-width: 500px;
-    max-width: 950px;
+  background-color: #ffffff; /* White background for the container */
+  padding: 30px;
+  gap: 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  width: 95%;
+  max-width: 950px;
+  opacity: 0.9; /* Slightly transparent */
+  box-shadow: #333 0px 30px 30px 0px; /* Darker shadow for better contrast */
 }
 
 h1 {
-    color: #143353; /* Blue heading */
-    margin-bottom: 20px;
+  color: #275788; /* Blue heading */
+  margin-bottom: 20px;
 }
 
 .input-section {
-    margin-bottom: 20px;
+  position: relative; /* This is needed to position the dropdown */
+  margin-bottom: 20px;
 }
 
+.search-results-dropdown {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 34%; /* Position right below the input field */
+  left: 6px; /* Align with the left edge of the input */
+  right: 16px; /* Align with the right edge of the input */
+  background-color: #ffffff;
+  border: 2px solid #272727;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.search-results-dropdown div {
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.search-results-dropdown div:hover {
+  background-color: #f0f0f0;
+}
 #city-input {
-    width: calc(100% - 22px); /* Adjust width to account for padding and border */
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc; /* Light grey border */
-    border-radius: 10px;
-    font-size: 16px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  width: calc(100% - 22px); /* Adjust width to account for padding and border */
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 10px;
+  font-size: 16px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 #get-weather-btn {
-    margin-top: 15px; /* Add margin to separate from input */
-    padding: 10px 15px;
-    background-color: #21827d; /* Green button */
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  margin-top: 15px; /* Add margin to separate from input */
+  padding: 10px 15px;
+  background-color: #21827d; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 #get-weather-btn:hover {
-    background-color: #218838; /* Darker green on hover */
+  background-color: #218838; /* Darker green on hover */
 }
 
 .weather-results {
-    background-color: #e9ecef; /* Light grey background for results */
-    padding: 20px;
-    border-radius: 20px;
-    min-height: 100px; /* Ensure some height even when empty */
-    display: flex;
-    font-size: 1.1em;
-    color: #555;
-    white-space: pre-wrap; /* Preserve whitespace and wrap text */
-    min-height: 300px; /* Ensure results box has a minimum height */
-    align-items: center;
-    text-align: center;
+  background-color: #e9ecef; /* Light grey background for results */
+  padding: 20px;
+  gap: 20px;
+  border-radius: 20px;
+  min-height: 100px; /* Ensure some height even when empty */
+  display: flex;
+  font-size: 1.1em;
+  color: #555;
+  white-space: pre-wrap; /* Preserve whitespace and wrap text */
+  min-height: 300px; /* Ensure results box has a minimum height */
+  align-items: center;
+  text-align: center;
+  justify-content: center; /* Center content vertically and horizontally */
 }
 
-
 @media screen and (max-width: 765px) {
-    .container {
-        width: 95%; /* Make the container wider on small screens */
-        padding: 20px; /* Reduce padding for smaller screens */
-    }
-
-    #city-input {
-        width: calc(100% - 20px); /* Adjust width for smaller screens */
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
-    }
-
-    #get-weather-btn {
-        width: 100%; /* Make button full width on small screens */
-    }
-    
+  #get-weather-btn {
+    width: 100%; /* Make button full width on small screens */
+  }
+  .weather-results {
+    padding: 10px;
+    gap: 10px;
+    font-size: 1em;
+  }
 }
