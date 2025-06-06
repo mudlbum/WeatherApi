@@ -1,0 +1,93 @@
+/* mudlbum/weatherapi/WeatherApi-57ad680432a5e95d81fcd925b70b55000b455477/public/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5; /* Light grey background */
+    color: #333; /* Dark grey text */
+}
+
+.container {
+    background-color: #ffffff; /* White background for the container */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    width: 95%;
+    min-width: 500px;
+    max-width: 950px;
+}
+
+h1 {
+    color: #007bff; /* Blue heading */
+    margin-bottom: 20px;
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+#city-input {
+    width: calc(100% - 22px); /* Adjust width to account for padding and border */
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#get-weather-btn {
+    margin-top: 15px; /* Add margin to separate from input */
+    padding: 10px 15px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#get-weather-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.weather-results {
+    background-color: #e9ecef; /* Light grey background for results */
+    padding: 20px;
+    border-radius: 8px;
+    min-height: 100px; /* Ensure some height even when empty */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    color: #555;
+    white-space: pre-wrap; /* Preserve whitespace and wrap text */
+}
+
+.weather-results p {
+    margin: 0;
+    min-height: 300px; /* Ensure results box has a minimum height */
+}
+
+@media screen and (max-width: 765px) {
+    .container {
+        width: 95%; /* Make the container wider on small screens */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    #city-input {
+        width: calc(100% - 20px); /* Adjust width for smaller screens */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
+    }
+
+    #get-weather-btn {
+        width: 100%; /* Make button full width on small screens */
+    }
+    
+}
